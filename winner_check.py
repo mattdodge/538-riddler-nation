@@ -48,7 +48,7 @@ def get_points(soln1, soln2):
 
 scores = defaultdict(lambda : [0,0,0])
 # Run all possible matchups and add up the scores as we go
-print("Running {:,} matchups...".format(len(inputs) * (len(inputs) - 1)))
+print("Running {:,} matchups...".format(len(inputs) * (len(inputs) - 1) / 2))
 matchup_num = 0
 for s1 in range(len(inputs)):
     soln1 = inputs[s1]
