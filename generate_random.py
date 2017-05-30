@@ -20,4 +20,7 @@ for i in range(NUM_TO_GENERATE):
         castles[actual_castle_num] = this_castle
         num_troops_remaining -= this_castle
 
+    # Don't forget about any leftover troops!
+    castles[random.randint(0, 9)] += num_troops_remaining
+
     print(",".join([str(c) for c in castles]))
