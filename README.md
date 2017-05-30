@@ -6,7 +6,7 @@ My approach to solving Round 2 of the Battle for Riddler Nation. The goal is to 
 Basically, my approach is to generate a lot of random inputs and see which one beats all the rest. The approach to randomizing is a little interesting, read more in the [Randomization](#randomization) section. Ultimately, the solution I went with is this (castle 1, castle 2, ..., castle 10):
 
 ```
-[2, 3, 2, 8, 3, 2, 26, 25, 26, 3]
+[0, 5, 5, 5, 13, 8, 2, 32, 22, 8]
 ```
 
 To (partially) reproduce, run the following to generate 10,000 random submissions and print out the top 10:
