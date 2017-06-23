@@ -3,7 +3,7 @@
 My approach to solving Round 2 of the Battle for Riddler Nation. The goal is to get the most castle points compared to all the other submissions. Read more about the problem at [FiveThirtyEight](http://fivethirtyeight.com/features/the-battle-for-riddler-nation-round-2/).
 
 ## TL;DR
-Basically, my approach is to generate a lot of random inputs and see which one beats all the rest. The approach to randomizing is a little interesting, read more in the [Randomization](#randomization) section. Ultimately, the solution I went with is this (castle 1, castle 2, ..., castle 10):
+Basically, my approach is to generate a lot of random inputs and see which one beats all the rest. The approach to randomizing is a little interesting, read more in the [Randomization](#randomization) section. Ultimately, the solution I went with is this (castle 1, castle 2, ..., castle 10): ([See results below](#results))
 
 ```
 [0, 5, 5, 5, 13, 8, 2, 32, 22, 8]
@@ -41,3 +41,9 @@ for castle in shift(castles, random.randint(0, 9)):
     castle.add_troops(troops_for_this_castle)
 castles[random.randint(0, 9)].add_troops(troops_remaining)
 ```
+
+## Results
+
+**Update with the results**
+
+The above solution ranked #170 out of 932 submissions (82nd percentile) ([results here](https://github.com/fivethirtyeight/data/blob/master/riddler-castles/castle-solutions-2.csv#L171)). Not great, but not terrible. Check out some more description of the winners' strategy at [the FiveThirtyEight blog post](https://fivethirtyeight.com/features/how-much-should-you-bid-for-that-painting/).
